@@ -1,36 +1,4 @@
-import { Play } from "lucide-react"
-
-function VideoCapsule() {
-  return (
-    <div className="mt-10 flex w-full max-w-lg mx-auto items-center justify-center">
-      <div className="relative h-[180px] w-[440px] shrink-0 overflow-hidden rounded-full bg-black shadow-[0_10px_30px_rgba(0,0,0,0.25)] ring-1 ring-black/10">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover opacity-90"
-          aria-hidden
-        >
-          <source src="/hero/hero-bg.mp4" type="video/mp4" />
-        </video>
-
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/40"
-          aria-hidden
-        />
-
-        <button
-          type="button"
-          aria-label="Play video"
-          className="absolute left-1/2 top-1/2 inline-flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-black shadow-sm transition hover:bg-white"
-        >
-          <Play className="ml-0.5 size-5 fill-black" />
-        </button>
-      </div>
-    </div>
-  )
-}
+import VideoCapsule from "./video-capsule"
 
 export function PurposeSection() {
   return (
