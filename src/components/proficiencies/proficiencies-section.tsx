@@ -63,24 +63,53 @@ export default function ProficienciesSection() {
       <div className="relative mx-auto w-full max-w-7xl px-4 md:px-8">
         <div className="grid gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
           {/* LEFT CONTENT — UNCHANGED */}
-          <div>
-            <p className="text-xs font-semibold tracking-[0.35em] text-[#7c2cff]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+          >
+            <motion.p
+              className="text-xs font-semibold tracking-[0.35em] text-[#7c2cff]"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+            >
               • PROFICIENCIES
-            </p>
+            </motion.p>
 
-            <h2 className="mt-5 text-4xl md:text-5xl lg:text-[3.5rem] font-semibold leading-[1.05] tracking-tight text-[#0b0b12]">
+            <motion.h2
+              className="mt-5 text-4xl md:text-5xl lg:text-[3.5rem] font-semibold leading-[1.05] tracking-tight text-[#0b0b12]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+            >
               C-suite expertise without
               the full-time overhead.
-            </h2>
+            </motion.h2>
 
-            <p className="mt-6 max-w-md text-base md:text-lg leading-7 text-[#0b0b12]/70">
+            <motion.p
+              className="mt-6 max-w-md text-base md:text-lg leading-7 text-[#0b0b12]/70"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            >
               XFractor embeds experienced operators into your business—bringing
               clarity, structure, and execution momentum.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* RIGHT — CARDS */}
-          <div className="grid grid-cols-2 gap-4">
+          <motion.div
+            className="grid grid-cols-2 gap-4"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+          >
             {proficiencies.map((item) => {
               const Icon = item.icon
               const isHovered = hoveredId === item.id
@@ -91,6 +120,14 @@ export default function ProficienciesSection() {
                   className="relative cursor-pointer"
                   onHoverStart={() => setHoveredId(item.id)}
                   onHoverEnd={() => setHoveredId(null)}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.1 * item.id,
+                    ease: [0.4, 0, 0.2, 1],
+                  }}
                 >
                   <motion.div
                     className="relative h-[280px] rounded-2xl p-6 overflow-hidden"
@@ -188,7 +225,7 @@ export default function ProficienciesSection() {
                 </motion.div>
               )
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

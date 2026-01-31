@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion"
 import Navbar from "@/components/navbar/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
@@ -38,19 +41,48 @@ export function Hero() {
         <main className="mx-auto flex w-full max-w-6xl flex-1 items-end px-4 pb-[10%] md:px-8">
           {/* Left: Copy */}
           <section className="max-w-xl space-y-6 text-left">
-            <div className="space-y-3">
+            <motion.div
+              className="space-y-3"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+            >
               <h1 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-                <span className="block">Fractional Leadership.</span>
-                <span className="block text-white/90">Real Outcomes.</span>
+                <motion.span
+                  className="block"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+                >
+                  Fractional Leadership.
+                </motion.span>
+                <motion.span
+                  className="block text-white/90"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+                >
+                  Real Outcomes.
+                </motion.span>
               </h1>
-              <p className="max-w-xl text-base text-white/80 md:text-lg">
+              <motion.p
+                className="max-w-xl text-base text-white/80 md:text-lg"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+              >
                 Senior expertise on demand. Fast, flexible and built for modern
                 business. Unlock strategic momentum without the overhead of a
                 full-time executive team.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
-            <div className="flex flex-col items-center gap-4 pt-2 sm:flex-row">
+            <motion.div
+              className="flex flex-col items-center gap-4 pt-2 sm:flex-row"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
+            >
               <Button
                 size="lg"
                 className="h-11 rounded-full bg-[#9F54E6] px-7 text-sm font-semibold text-white shadow-lg cursor-pointer transition-colors hover:bg-[#7d2fbe]"
@@ -64,7 +96,7 @@ export function Hero() {
                 How fractional leadership works
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </div>
+            </motion.div>
           </section>
         </main>
       </div>

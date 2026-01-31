@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion"
 import VideoCapsule from "./video-capsule"
 
 export function PurposeSection() {
@@ -11,33 +14,74 @@ export function PurposeSection() {
 
       <div className="relative mx-auto w-full max-w-6xl px-4 md:px-8">
         {/* Top container: label + heading */}
-        <div className="max-w-5xl">
-          <p className="text-xs font-semibold tracking-[0.35em] text-[#7c2cff]">
+        <motion.div
+          className="max-w-5xl"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <motion.p
+            className="text-xs font-semibold tracking-[0.35em] text-[#7c2cff]"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
+          >
             — PURPOSE
-          </p>
+          </motion.p>
 
-          <h2 className="mt-5 text-4xl md:text-5xl lg:text-[4.3rem] font-semibold leading-[1.05] tracking-tight text-[#0b0b12]">
+          <motion.h2
+            className="mt-5 text-4xl md:text-5xl lg:text-[4.3rem] font-semibold leading-[1.05] tracking-tight text-[#0b0b12]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
+          >
             <span className="text-[#9F54E6]">Business Needs</span> Have Changed.
             <br />
-            Leadership Models Haven’t.
-          </h2>
-        </div>
+            Leadership Models Haven't.
+          </motion.h2>
+        </motion.div>
 
         {/* Bottom container: split capsule + paragraph */}
-        <div className="mt-10 grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center justify-center">
-          <div>
+        <motion.div
+          className="mt-10 grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center justify-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
+        >
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
+          >
             <VideoCapsule />
-          </div>
+          </motion.div>
 
-          <div className="md:pl-2">
+          <motion.div
+            className="md:pl-2"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
+          >
             <p className="max-w-md text-base md:text-md lg:text-lg leading-7 text-[#0b0b12]/70">
               Fractional leadership gives you the expertise you need—faster,
               leaner, and with measurable impact—an agile way to grow.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-      <div className="relative mx-auto w-full max-w-7xl mt-[20rem] h-[600px] md:h-[700px] rounded-3xl overflow-hidden">
+      <motion.div
+        className="relative mx-auto w-full max-w-7xl mt-[20rem] h-[600px] md:h-[700px] rounded-3xl overflow-hidden"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
+      >
         <video
           autoPlay
           muted
@@ -73,7 +117,7 @@ export function PurposeSection() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
