@@ -2,7 +2,7 @@ import VideoCapsule from "./video-capsule"
 
 export function PurposeSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f6f7fb] py-[10%]">
+    <section className="relative overflow-hidden bg-[#f6f7fb] pt-[10%]">
       {/* Subtle grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-60 [background-image:linear-gradient(to_right,rgba(15,23,42,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.06)_1px,transparent_1px)] [background-size:44px_44px]"
