@@ -79,7 +79,7 @@ export default function PropositionSection() {
                 </motion.div>
 
                 {/* Image + Steps */}
-                <div className="mt-16 grid gap-12 md:grid-cols-[1fr_1fr] md:items-center">
+                <div className="mt-12 md:mt-16 grid gap-8 md:gap-12 md:grid-cols-[1fr_1fr] md:items-center">
                     {/* Image */}
                     <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-200">
                         <div className="absolute inset-0 bg-gradient-to-br from-[#f5f5f5] to-[#e5e5e5]

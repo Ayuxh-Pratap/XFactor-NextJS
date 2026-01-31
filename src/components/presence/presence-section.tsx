@@ -53,29 +53,29 @@ export default function PresenceSection() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
         >
-          <div className="flex items-center justify-between bg-[#5b21b6] px-6 md:px-8 py-4 md:py-5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#5b21b6] px-4 sm:px-6 md:px-8 py-4 md:py-5">
             {/* Left: PRESENCE Label */}
             <div className="text-sm md:text-base font-medium uppercase tracking-wider text-white">
               PRESENCE
             </div>
 
             {/* Right: Locations with Flags */}
-            <div className="flex items-center gap-4 md:gap-6">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6">
               {locations.map((location, index) => (
-                <div key={location.id} className="flex items-center gap-4 md:gap-6">
-                  <div className="flex items-center gap-2 md:gap-3">
+                <div key={location.id} className="flex items-center gap-2 sm:gap-3 md:gap-4">
+                  <div className="flex items-center gap-2 sm:gap-3">
                     {/* Flag Icon */}
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20 text-lg md:h-10 md:w-10 md:text-xl">
+                    <div className="flex h-7 w-7 sm:h-8 sm:w-8 md:h-10 md:w-10 items-center justify-center rounded-full bg-white/20 text-base sm:text-lg md:text-xl shrink-0">
                       {location.flag}
                     </div>
                     {/* Country Name */}
-                    <span className="text-sm md:text-base font-medium text-white">
+                    <span className="text-xs sm:text-sm md:text-base font-medium text-white whitespace-nowrap">
                       {location.name}
                     </span>
                   </div>
                   {/* Separator */}
                   {index < locations.length - 1 && (
-                    <div className="h-6 w-[1px] bg-white/40" />
+                    <div className="h-4 sm:h-6 w-[1px] bg-white/40 hidden sm:block" />
                   )}
                 </div>
               ))}

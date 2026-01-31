@@ -53,6 +53,7 @@ export function PurposeSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
         >
           <motion.div
+            className="flex justify-center md:justify-start"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -62,13 +63,13 @@ export function PurposeSection() {
           </motion.div>
 
           <motion.div
-            className="md:pl-2"
+            className="md:pl-2 text-center md:text-left"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
           >
-            <p className="max-w-md text-base md:text-md lg:text-lg leading-7 text-[#0b0b12]/70">
+            <p className="max-w-md mx-auto md:mx-0 text-base md:text-md lg:text-lg leading-7 text-[#0b0b12]/70">
               Fractional leadership gives you the expertise you need—faster,
               leaner, and with measurable impact—an agile way to grow.
             </p>
@@ -76,7 +77,7 @@ export function PurposeSection() {
         </motion.div>
       </div>
       <motion.div
-        className="relative mx-auto w-full max-w-7xl mt-[20rem] h-[600px] md:h-[700px] rounded-3xl overflow-hidden"
+        className="relative mx-auto w-full max-w-7xl mt-12 md:mt-32 lg:mt-[20rem] h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] rounded-3xl overflow-hidden px-4 md:px-0"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -100,16 +101,16 @@ export function PurposeSection() {
         />
 
         {/* Dark purple overlay at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 bg-white/15 px-6 md:px-8 lg:px-12 py-6 rounded-2xl my-4 mx-4">
-          <div className="flex items-center justify-between gap-4 max-w-7xl mx-auto">
-            <div className="font-bold text-white text-lg md:text-xl">
+        <div className="absolute bottom-0 left-0 right-0 bg-white/15 px-4 md:px-6 lg:px-12 py-4 md:py-6 rounded-2xl my-2 md:my-4 mx-2 md:mx-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 max-w-7xl mx-auto">
+            <div className="font-bold text-white text-base sm:text-lg md:text-xl">
               Rising talent costs
             </div>
-            <div className="flex items-center gap-4 flex-1 justify-end">
-              <p className="text-white text-sm md:text-base max-w-2xl text-right">
+            <div className="flex items-center gap-3 sm:gap-4 flex-1 justify-end">
+              <p className="text-white text-xs sm:text-sm md:text-base max-w-2xl text-left sm:text-right">
                 Full-time executives are expensive, slow to hire, and hard to retain.
               </p>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 shrink-0">
                 <div className="w-1 h-1 rounded-full bg-white/70" />
                 <div className="w-1 h-1 rounded-full bg-white/70" />
                 <div className="w-1 h-1 rounded-full bg-white/70" />

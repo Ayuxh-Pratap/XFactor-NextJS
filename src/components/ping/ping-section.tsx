@@ -52,7 +52,7 @@ export default function PingSection() {
 
           {/* Main Container: Purple Gradient */}
           <motion.div
-            className="mt-12 rounded-t-3xl bg-gradient-to-br from-[#5b21b6] via-[#7c2cff] to-[#9F54E6] p-8 md:p-12"
+            className="mt-12 rounded-t-3xl bg-gradient-to-br from-[#5b21b6] via-[#7c2cff] to-[#9F54E6] p-6 sm:p-8 md:p-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -60,40 +60,42 @@ export default function PingSection() {
           >
             <div className="grid gap-8 md:grid-cols-[1fr_1px_1fr] md:items-start">
               {/* Left Column: Contact Information */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {/* Logo */}
                 <div>
-                  <p className="text-sm text-white/80">the</p>
-                  <h3 className="text-3xl font-bold text-white">
+                  <p className="text-xs sm:text-sm text-white/80">the</p>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white">
                     <span className="text-white">X</span>Fractor
                   </h3>
                 </div>
 
                 {/* Location */}
                 <div className="flex items-start gap-3">
-                  <MapPin className="mt-1 h-5 w-5 shrink-0 text-white" />
-                  <p className="text-sm text-white">Singapore | India | UAE</p>
+                  <MapPin className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-white" />
+                  <p className="text-xs sm:text-sm text-white break-words">
+                    Singapore | India | UAE
+                  </p>
                 </div>
 
                 {/* Email */}
                 <div className="flex items-start gap-3">
-                  <Mail className="mt-1 h-5 w-5 shrink-0 text-white" />
-                  <p className="text-sm text-white">
+                  <Mail className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-white" />
+                  <p className="text-xs sm:text-sm text-white break-words">
                     akshay@thexfractor.com | gayatri@thexfractor.com
                   </p>
                 </div>
 
                 {/* Phone */}
                 <div className="flex items-start gap-3">
-                  <Phone className="mt-1 h-5 w-5 shrink-0 text-white" />
-                  <p className="text-sm text-white">
+                  <Phone className="mt-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0 text-white" />
+                  <p className="text-xs sm:text-sm text-white break-words">
                     +65 93831510 | +91 9769923174
                   </p>
                 </div>
 
                 {/* Button */}
                 <Button
-                  className="mt-8 rounded-full bg-[#9F54E6] px-6 py-6 text-white hover:bg-[#8b3dd4]"
+                  className="mt-6 sm:mt-8 w-full sm:w-auto rounded-full bg-[#9F54E6] px-5 sm:px-6 py-5 sm:py-6 text-sm sm:text-base text-white hover:bg-[#8b3dd4]"
                 >
                   Schedule a Conversation
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -106,30 +108,30 @@ export default function PingSection() {
               {/* Right Column: Contact Form */}
               <div className="space-y-4">
                 {/* First Row: First Name & Last Name */}
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2">
                   <Input
                     type="text"
                     placeholder="First Name"
-                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20"
+                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20 text-sm"
                   />
                   <Input
                     type="text"
                     placeholder="Last Name"
-                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20"
+                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20 text-sm"
                   />
                 </div>
 
                 {/* Second Row: Email & Phone */}
-                <div className="grid gap-4 md:grid-cols-2">
+                <div className="grid gap-4 sm:grid-cols-2">
                   <Input
                     type="email"
                     placeholder="Email"
-                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20"
+                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20 text-sm"
                   />
                   <Input
                     type="tel"
                     placeholder="Phone Number"
-                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20"
+                    className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20 text-sm"
                   />
                 </div>
 
@@ -137,7 +139,7 @@ export default function PingSection() {
                 <Textarea
                   placeholder="Message"
                   rows={4}
-                  className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20"
+                  className="rounded-lg bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:border-white/40 focus:ring-white/20 text-sm"
                 />
               </div>
             </div>
@@ -147,9 +149,9 @@ export default function PingSection() {
 
       {/* Footer */}
       <footer className="bg-[#5b21b6] py-4">
-        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 md:px-8">
-          <p className="text-sm text-white">©2025 XFractor</p>
-          <p className="text-sm text-white">Made by Double Works</p>
+        <div className="mx-auto flex w-full max-w-7xl flex-col sm:flex-row items-center justify-between gap-2 px-4 md:px-8">
+          <p className="text-xs sm:text-sm text-white text-center sm:text-left">©2025 XFractor</p>
+          <p className="text-xs sm:text-sm text-white text-center sm:text-right">Made by Double Works</p>
         </div>
       </footer>
     </>

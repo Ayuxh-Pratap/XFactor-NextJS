@@ -38,9 +38,9 @@ export function Hero() {
         <Navbar />
 
         {/* Hero body pinned to bottom-left */}
-        <main className="mx-auto flex w-full max-w-6xl flex-1 items-end px-4 pb-[10%] md:px-8">
+        <main className="mx-auto flex w-full max-w-6xl flex-1 items-end px-4 pb-16 sm:pb-20 md:pb-[10%] md:px-8">
           {/* Left: Copy */}
-          <section className="max-w-xl space-y-6 text-left">
+          <section className="max-w-xl space-y-4 sm:space-y-6 text-left">
             <motion.div
               className="space-y-3"
               initial={{ opacity: 0, y: 20 }}

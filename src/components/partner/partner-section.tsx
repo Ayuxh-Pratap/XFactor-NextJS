@@ -67,9 +67,9 @@ export default function PartnerSection() {
             {companies.map((company) => (
               <div
                 key={`first-${company.id}`}
-                className="flex h-24 min-w-[200px] shrink-0 items-center justify-center border border-[#9F54E6]/20 bg-white px-8"
+                className="flex h-20 sm:h-24 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] shrink-0 items-center justify-center border border-[#9F54E6]/20 bg-white px-4 sm:px-6 md:px-8"
               >
-                <span className="text-lg font-semibold text-gray-600 grayscale">
+                <span className="text-sm sm:text-base md:text-lg font-semibold text-gray-600 grayscale">
                   {company.logo}
                 </span>
               </div>
@@ -85,9 +85,9 @@ export default function PartnerSection() {
             {companies.map((company) => (
               <div
                 key={`second-${company.id}`}
-                className="flex h-24 min-w-[200px] shrink-0 items-center justify-center border border-[#9F54E6]/20 bg-white px-8"
+                className="flex h-20 sm:h-24 min-w-[150px] sm:min-w-[180px] md:min-w-[200px] shrink-0 items-center justify-center border border-[#9F54E6]/20 bg-white px-4 sm:px-6 md:px-8"
               >
-                <span className="text-lg font-semibold text-gray-600 grayscale">
+                <span className="text-sm sm:text-base md:text-lg font-semibold text-gray-600 grayscale">
                   {company.logo}
                 </span>
               </div>

@@ -116,7 +116,7 @@ export default function PerformanceSection() {
 
         {/* Controls: Toggle Buttons and Navigation Arrows */}
         <motion.div
-          className="mt-8 flex items-center justify-between"
+          className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -126,7 +126,7 @@ export default function PerformanceSection() {
           <div className="flex gap-2">
             <button
               onClick={() => setActiveTab("testimonials")}
-              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-lg px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-all ${
                 activeTab === "testimonials"
                   ? "bg-[#7c2cff] text-white"
                   : "bg-gray-200 text-[#0b0b12] border border-gray-300"
@@ -136,7 +136,7 @@ export default function PerformanceSection() {
             </button>
             <button
               onClick={() => setActiveTab("case-studies")}
-              className={`rounded-lg px-4 py-2 text-sm font-medium transition-all ${
+              className={`rounded-lg px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-all ${
                 activeTab === "case-studies"
                   ? "bg-[#7c2cff] text-white"
                   : "bg-gray-200 text-[#0b0b12] border border-gray-300"
@@ -150,17 +150,17 @@ export default function PerformanceSection() {
           <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-[#7c2cff] transition-colors hover:bg-gray-50"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-gray-300 bg-white text-[#7c2cff] transition-colors hover:bg-gray-50"
               aria-label="Scroll left"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
             <button
               onClick={() => scroll("right")}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#7c2cff] text-white transition-colors hover:bg-[#6b21a8]"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#7c2cff] text-white transition-colors hover:bg-[#6b21a8]"
               aria-label="Scroll right"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
             </button>
           </div>
         </motion.div>
@@ -188,7 +188,7 @@ export default function PerformanceSection() {
             {items.map((item, index) => (
               <motion.div
                 key={item.id}
-                className="min-w-[350px] max-w-[400px] p-4"
+                className="min-w-[280px] sm:min-w-[320px] md:min-w-[350px] max-w-[400px] p-4 shrink-0"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -198,10 +198,10 @@ export default function PerformanceSection() {
                   ease: [0.4, 0, 0.2, 1],
                 }}
               >
-                <h3 className="text-lg font-semibold text-[#0b0b12]">
+                <h3 className="text-base sm:text-lg font-semibold text-[#0b0b12]">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-[#0b0b12]/70">
+                <p className="mt-3 text-xs sm:text-sm leading-6 text-[#0b0b12]/70">
                   {item.description}
                 </p>
               </motion.div>

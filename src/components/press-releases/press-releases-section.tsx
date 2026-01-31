@@ -30,7 +30,7 @@ const articles = [
 
 export default function PressReleasesSection() {
   return (
-    <section className="relative overflow-hidden bg-[#f6f7fb]">
+    <section className="relative overflow-hidden bg-[#f6f7fb] py-[10%]">
       <div className="relative mx-auto w-full max-w-7xl px-4 md:px-8">
         {/* Top: Label, Heading, Subheading */}
         <motion.div
@@ -83,24 +83,24 @@ export default function PressReleasesSection() {
           transition={{ duration: 0.6, delay: 0.4, ease: [0.4, 0, 0.2, 1] }}
         >
           {/* Left: Featured Article */}
-          <div className="rounded-2xl bg-[#9F54E6]/15 p-6 md:p-8">
+          <div className="rounded-2xl bg-[#9F54E6]/15 p-4 sm:p-6 md:p-8">
             <div className="grid gap-6 md:grid-cols-2 md:items-center">
               {/* Image */}
-              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-gray-200">
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-gray-200 order-2 md:order-1">
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-200 to-gray-300">
-                  <span className="text-sm text-gray-400">Image placeholder</span>
+                  <span className="text-xs sm:text-sm text-gray-400">Image placeholder</span>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4 order-1 md:order-2">
                 <p className="text-xs font-medium uppercase tracking-wider text-[#0b0b12]/60">
                   {featuredArticle.date}
                 </p>
-                <h3 className="text-xl md:text-2xl font-semibold leading-tight text-[#0b0b12]">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold leading-tight text-[#0b0b12]">
                   {featuredArticle.title}
                 </h3>
-                <p className="text-sm leading-6 text-[#0b0b12]/70">
+                <p className="text-xs sm:text-sm leading-6 text-[#0b0b12]/70">
                   {featuredArticle.snippet}
                 </p>
               </div>
@@ -111,14 +111,14 @@ export default function PressReleasesSection() {
           <div className="space-y-0">
             {articles.map((article, index) => (
               <div key={article.id}>
-                <div className="py-6">
+                <div className="py-4 sm:py-6">
                   <p className="text-xs font-medium uppercase tracking-wider text-[#0b0b12]/60">
                     {article.date}
                   </p>
-                  <h3 className="mt-2 text-lg font-semibold leading-tight text-[#0b0b12]">
+                  <h3 className="mt-2 text-base sm:text-lg font-semibold leading-tight text-[#0b0b12]">
                     {article.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-[#0b0b12]/70">
+                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm leading-6 text-[#0b0b12]/70">
                     {article.snippet}
                   </p>
                 </div>

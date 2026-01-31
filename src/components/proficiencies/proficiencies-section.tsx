@@ -61,7 +61,7 @@ export default function ProficienciesSection() {
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 md:px-8">
-        <div className="grid gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
+        <div className="grid gap-8 md:gap-12 md:grid-cols-[1fr_1.2fr] md:items-center">
           {/* LEFT CONTENT — UNCHANGED */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -104,7 +104,7 @@ export default function ProficienciesSection() {
 
           {/* RIGHT — CARDS */}
           <motion.div
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 md:mt-0"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}

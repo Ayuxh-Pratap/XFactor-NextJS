@@ -81,7 +81,7 @@ export default function PeopleSection() {
 
         {/* Bottom: Team Cards */}
         <motion.div
-          className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
+          className="mt-8 sm:mt-12 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}

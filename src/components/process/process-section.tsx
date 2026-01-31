@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function ProcessSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-screen overflow-hidden flex items-center justify-center py-20 sm:py-0">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -42,7 +42,7 @@ export default function ProcessSection() {
 
           {/* Main Title */}
           <motion.h2
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.1] tracking-tight text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.1] tracking-tight text-white px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,7 +70,7 @@ export default function ProcessSection() {
 
           {/* Subtitle */}
           <motion.p
-            className="mt-8 text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed"
+            className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed px-4"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
