@@ -1,7 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import {
+  ScrollProgressProvider,
+  ScrollProgress,
+} from "@/components/animate-ui/primitives/animate/scroll-progress"
 
 type NavItem = {
     label: string
@@ -96,26 +102,35 @@ function CtaButton({
 export function Navbar({
     items = DEFAULT_NAV_ITEMS,
     cta = {
-        label: "Let’s talk",
+        label: "Let's talk",
         href: "#contact",
     },
 }: NavbarProps) {
     return (
-        <header className="relative z-30 w-full px-4 pt-4 md:px-8">
-            <div className="mx-auto flex max-w-7xl items-center justify-center">
-                <div className="inline-flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-white/80 via-white/50 to-white/80 px-4 py-2 shadow-[0_8px_20px_rgba(43,16,95,0.15)] backdrop-blur-xl ring-1 ring-white/60 dark:from-white/10 dark:via-white/5 dark:to-white/10 dark:ring-white/15 md:px-6 md:py-3">
-                    <BrandMark />
+        <ScrollProgressProvider global>
+            <header className="fixed top-0 left-0 right-0 z-50 w-full px-4 pt-4 md:px-8">
+                <div className="mx-auto flex max-w-7xl items-center justify-center">
+                    <div className="inline-flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-white/80 via-white/50 to-white/80 px-4 py-2 shadow-[0_8px_20px_rgba(43,16,95,0.15)] backdrop-blur-xl ring-1 ring-white/60 dark:from-white/10 dark:via-white/5 dark:to-white/10 dark:ring-white/15 md:px-6 md:py-3">
+                        <BrandMark />
 
-                    <div className="flex flex-1 items-center justify-center">
-                        <NavLinks items={items} />
-                    </div>
+                        <div className="flex flex-1 items-center justify-center">
+                            <NavLinks items={items} />
+                        </div>
 
-                    <div className="flex shrink-0 items-center justify-end">
-                        <CtaButton cta={cta} />
+                        <div className="flex shrink-0 items-center justify-end">
+                            <CtaButton cta={cta} />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </header>
+                {/* Scroll Progress Indicator */}
+                <div className="absolute left-0 right-0 h-[3px] overflow-hidden rounded-b-xl mx-11">
+                    <ScrollProgress
+                        mode="width"
+                        className="h-full bg-gradient-to-r from-[#7c2cff] via-[#9F54E6] to-[#7c2cff]"
+                    />
+                </div>
+            </header>
+        </ScrollProgressProvider>
     )
 }
 

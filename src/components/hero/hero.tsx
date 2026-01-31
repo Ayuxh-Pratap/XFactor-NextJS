@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import Navbar from "@/components/navbar/navbar"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -35,8 +34,6 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col">
-        <Navbar />
-
         {/* Hero body pinned to bottom-left */}
         <main className="mx-auto flex w-full max-w-6xl flex-1 items-end px-4 pb-16 sm:pb-20 md:pb-[10%] md:px-8">
           {/* Left: Copy */}
